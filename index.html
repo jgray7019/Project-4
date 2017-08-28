@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Movie Date</title>
+	<link rel="stylesheet" href="styles/styles.css">
+	<link rel="stylesheet" href="https://unpkg.com/flatpickr/dist/flatpickr.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400, 700|Droid+Sans" rel="stylesheet">
+</head>
+<body>
+
+	<header>
+		<div class="wrapper">
+			<h1>Movie <span>Date</span></h1>
+			<div class="headerText">
+				<p>Have you ever wanted to know what people were watching on the day of your birth?</p>
+				<p>Now that you're old enough, you can watch it too...</p>
+				<button type='button' class='startButton'>Let's Go!</button>
+			</div>
+		</div>
+	</header>
+	
+	<main class='birthdayContainer'>
+		<div class="wrapper">
+			<form action="">
+				<label for="birthday">Birthday Here</label>
+				<input type="text" name="birthday" class="userBirthday" placeholder="YYYY-MM">
+				<input type="submit" class="userSubmit">
+			</form>
+		</div>
+	</main>
+
+	<section class='results wrapper'>
+		<!-- movie poster and description is generated here -->
+	</section>
+
+	<section class='videoContainer wrapper'>
+		<!-- youtube trailer is generated here -->
+	</section>
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/flatpickr"></script>
+<script src="scripts/script.js"></script>
+</body>
+</html>

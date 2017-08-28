@@ -1,0 +1,26 @@
+@import 'variables';
+@import 'mixins';
+
+html {
+	font-size: 62.5%;
+	@include respond-to('small') {
+		font-size: 50%;
+	}
+}
+
+.wrapper {
+	max-width: 1060px;
+	margin: 0 auto;
+	@include respond-to('medium') {
+		max-width: 90%;
+	}
+}
+
+body {
+	background: url(../assets/vintage-speckles.png);
+	font-family: $bodyFont;
+}
+
+img {
+	max-width: 100%;
+}

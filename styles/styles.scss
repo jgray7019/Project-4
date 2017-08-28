@@ -1,0 +1,215 @@
+@import "partials/variables";
+@import "partials/setup";
+@import "partials/mixins";
+@import "partials/global";
+
+header {
+	background: linear-gradient( rgba(201, 189, 185,0.7), 100%, rgba(201, 189, 185,0)), url(../assets/hero.jpeg);	
+	background-size: cover;
+}
+
+header .wrapper{
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	align-items: flex-start;
+}
+
+h1 {
+	font-size: 13.0rem;
+	text-transform: lowercase;
+	color: $red;
+	font-family: $titleFont;
+	margin-bottom: 3.0rem;
+	line-height: 13.0rem;
+	display: inline-block;
+	@include respond-to('medium') {
+		font-size: 10.0rem;
+	}
+	span {
+		display: block;
+		padding-bottom: 2.0rem;
+	}
+}
+
+header .headerText{
+	font-size: 2.0rem;
+	width: 50%;
+	color: $darkNavy;
+	font-weight: 700;
+	display: flex;
+	flex-direction: column;
+}
+
+header p:nth-of-type(1) {
+	border-top: 0.6rem $red solid;
+	padding-top: 2.0rem;
+	margin-top: 0;
+}
+
+.startButton {
+	margin: 0 auto;
+	border: 2px $red solid;
+	color: $darkNavy;
+	background: none;
+	font-family: $titleFont;
+	font-size: 1.5rem;
+	margin-bottom: 2.0rem;
+	border-radius: 3px;
+	padding: 1.0rem 2.0rem;
+	&:hover {
+		color: $red;
+		border: 2px $navy solid;
+	}
+}
+
+// ************** BIRTHDAY FORM ********************
+
+.birthdayContainer {
+	height: 100vh;
+	display: flex;
+	align-items: center;
+}
+
+main form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
+	color: $navy;
+}
+
+label {
+	font-size: 3.0rem;
+	text-transform: lowercase;
+	font-family: $titleFont;
+}
+
+.userBirthday {
+	margin: 3.0rem 0;
+	font-size: 3.0rem;
+	color: $navy;
+	border: none;
+	background: $grey;
+	text-align: center;
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,.35);
+}
+
+.userSubmit {
+	background: $red;
+	border: none;
+	padding: 2.0rem 3.0rem;
+	text-transform: uppercase;
+	border-radius: 10px;
+	font-size: 1.5rem;
+	font-weight: 700;
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,.35);
+	&:hover {
+		background: $navy;
+		color: $white;
+	}
+}
+
+// ********* MOVIE LISTING *********************
+
+.movieContainer {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	min-height: 100vh;
+	@include respond-to('medium') {
+		display: block;
+		margin: 0 auto;
+	}
+}
+
+.movieImage {
+	width: 35%;
+	font-size: 0;
+	@include respond-to('medium') {
+		width: 80%;
+		margin: 0 auto;
+		margin-bottom: 5.0rem;
+	}
+	img {
+		border: 6px $darkNavy solid;
+		box-shadow: 0 3px 7px 0 rgba(0,0,0,.35);
+	}
+}
+
+.movieDescription {
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,.35);
+	width: 50%;
+	background: $navy;
+	color: $white;	
+	padding: 2.0rem 3.0rem;
+	border: 6px solid $darkNavy;
+	text-align: center;
+	position: relative;
+	@include respond-to('medium') {
+		width: 100%;
+	}
+	h2 {
+		font-size: 3.0rem;
+		text-transform: lowercase;
+		font-family: $titleFont;
+		color: $red;
+	}
+	p {
+		text-align: left;
+		font-size: 2.0rem;
+	}
+}
+
+.movieDescription::after {
+	content:'';	
+	width: 80%;
+	height: 1px;
+	top: -30px;
+	left: -6px;
+	border-bottom: 6px $navy solid;
+	position: absolute;
+}
+
+.movieDescription::before {
+	content:'';	
+	width: 80%;
+	height: 1px;
+	bottom: -30px;
+	right: -6px;
+	border-bottom: 6px $navy solid;
+	position: absolute;
+}
+
+.videoButton {
+	border: none;
+	background: $white;
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,.35);
+	margin: 0 auto;
+	text-transform: uppercase;
+	color: $darkNavy;
+	font-weight: 700;
+	font-size: 1.4rem;
+	padding: 1.5rem 2.5rem;
+	&:hover {
+		background: $red;
+		color: $white;
+	}
+}
+
+// ****** Video Container ***********
+
+.video {
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+iframe {
+	box-shadow: 0 3px 7px 0 rgba(0,0,0,.35);
+	position: relative;
+}
+
+
